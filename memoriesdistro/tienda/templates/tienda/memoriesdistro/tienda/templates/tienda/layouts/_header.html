@@ -1,0 +1,132 @@
+<header>
+    <nav class="navbar navbar-expand-lg " style="background-color:rgb(66, 66, 66);">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="index.html" style="color: white; font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;">
+            <img src="statics/img/646775-1.jpg" alt="Logo" width="60" height="60" class="d-inline-block align-text-top" >
+            <strong>Memoriesdistro</strong></a>
+            <!-- Si se desea agregar una imagen (logo) a la barra se elimina la linea con la clase 
+                .navbar-brand y se reemplaza por la siguiente linea de codigo: -->
+        <!-- <nav class="navbar bg-body-tertiary">
+            <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="30" height="24">
+            </a>
+            </div>
+        </nav> -->
+
+        <!-- Si se desea agregar una imagen con texto al lado se escribe la siguiente linea:
+            <nav class="navbar bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                        Bootstrap
+                    </a>
+                </div>
+            </nav> 
+            Nota: al lado de img se debe agregar class="d-inline-block align-text-top"-->
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="background-color: rgba(255, 255, 255, 0.575)">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="cd.html" style="color: white;">CD</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#" style="color: white;">Cassette</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">Vinilo</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Nuevo</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Usado</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Ver Todo</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#" style="color: white;">Ofertas</a>
+            </li>
+            
+
+            <!-- Opcion desplegable -->
+            <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </li> -->
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-3" type="search" placeholder="Buscar" aria-label="Search">
+              <button class="btn btn-success me-3" type="submit">Buscar</button>
+            </form>
+        </div>
+        </div>
+    </nav>
+    
+    <!--Base nav-->
+    <div>
+      <ul class="nav justify-content-end" style="background-color: rgb(92, 92, 92);">
+          <div class="text-end">
+            <a href="#"><button type="button" class="btn btn-light text-dark me-2">Contáctanos</button></a>
+            <a href="login.html"><button type="button" class="btn btn-light text-dark me-2">Ingresar</button></a>
+            <a href="registro.html"><button type="button" class="btn btn-primary me-2">Regístrate</button></a>
+            <button class="btn btn-success text-light me-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+              <!-- <i class="fa fa-c"></i> -->
+              <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg> -->
+              
+              <i class="fa-solid fa-cart-shopping"></i>
+              <strong>Carro</strong>
+          </button>
+            
+          </div>
+      </ul>
+    </div>
+
+    <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasRightLabel">Carro de compra</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+          <table class="table text-light">
+            <thead>
+              <tr>
+                <th scope="col">Imagen</th>
+                <th scope="col">Producto</th>
+                <th scope="col">Precio</th>
+              </tr>
+            </thead>
+            <tbody id="carrito-producto">
+              <tr>
+                <td></td>
+                <td>No hay productos agregados</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+
+
+          <div class="d-grid gap-2">
+              <!-- <form class="d-flex" role="search" action="https://api.whatsapp.com/send/?phone=56976316201&" method="POST">
+                  <input class="form-control me-2" name="text" type="submit" placeholder="" aria-label="Search" disabled>
+                  <button class="btn btn-success btn-lg" type="submit">
+                      Enviar compra a wsp <i class="fa-brands fa-whatsapp"></i> $ <span id="carrito-precio">0</span>
+                  </button>
+              </form> -->
+              <button class="btn btn-success btn-lg" type="button">
+                  Enviar compra a wsp <i class="fa-brands fa-whatsapp"></i> $ <span id="carrito-precio">0</span>
+              </button>
+          </div>
+
+        </div>
+    </div>
+</header>
