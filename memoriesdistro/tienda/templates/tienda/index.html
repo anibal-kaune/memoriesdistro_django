@@ -1,0 +1,402 @@
+{% extends 'tienda/layouts/app.html' %}
+{% block contenido %}
+    <main>
+        <section>
+            <!--Carrucel-->
+            <br>
+            <div class="container">
+              <div class="row">
+                <div class="col-12 px-0">
+                  <div class="row row-cols-1 row-cols-md-1 g-4 mt-3">
+                    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                      </div>
+                      <div class="carousel-inner" style="text-align: center; width: 1200; height: 500;">
+                        <div class="carousel-item active" style="text-align: center;">
+                          <img src="img/cassette-2.jpg" class="img-fluid" width="1200" height="500" style="text-align: center;" >
+                          <div class="container">
+                            <div class="carousel-caption text-center" style="color:black">
+                              <h1 style="font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;"><strong>Nostalgia ochentera</strong></h1>
+                              <p style="font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;"><strong>Revisa nuestras ofertas en Cassettes</strong></p>
+                              <p><a class="btn btn-lg btn-dark text-light" href="#">Ver</a></p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="carousel-item img" style="text-align: center;">
+                          <img src="img/cartel-oferta-1.jpg" class="img-fluid" >
+                          <div class="container">
+                            <div class="carousel-caption text-center" style="color:black">
+                              <h1 style="font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;"><strong>Ofertas del mes</strong></h1>
+                              <p style="font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;"><strong>Apurate, que se acaban</strong></p>
+                              <p><a class="btn btn-lg btn-dark text-light" href="#">Ver</a></p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="carousel-item" style="text-align: center;">
+                          <img src="img/Redes-Sociales-1.jpg" class="img-fluid" width="1200" height="500">  
+                          <div class="container">
+                            <div class="carousel-caption text-center" style="color:black"> 
+                              <h1 style="font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;"><strong>Contactanos</strong></h1>
+                              <p style="font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;"><strong>Visita nuestras redes sociales</strong></p>
+                              <p><a class="btn btn-lg btn-dark text-light" href="#">Ver</a></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Atras</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+            
+          
+            <br>
+            <br>
+            <h2 style="text-align: center; font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;">Categorias</h2>
+            <hr>
+            
+            
+            <!--Grid Cards categorias-->
+          <div class="row row-cols-1 row-cols-md-1 g-4 mt-3">
+            <div class="col">
+              <div class="card">
+                <img src="img/Used-CDs_thumb.jpg" class="card-img-top" height="400" alt="...">
+                <div class="card-img-overlay" style="text-align: center;">
+                  <h2 class="card-title" style="color: white; font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;"><br><br><br><br><strong>CD</strong></h2>
+                  <br><br>
+                  <a href="cd.html" class="btn btn-dark text-light">LEER MÁS</a>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col">
+              <div class="card">
+                <img src="img/il_fullxfull.2573567002_3jq1.webp" class="card-img-top" height="400" alt="...">
+                <div class="card-img-overlay" style="text-align: center;">
+                  <h2 class="card-title" style="color:white; font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;"><br><br><br><br><strong>Cassette</strong></h2>
+                  <br><br>
+                  <a href="#" class="btn btn-dark text-light">LEER MÁS</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="img/250013-australia-abrira-nueva-fabrica-vinilos-30-anos.webp" class="card-img-top" height="400" alt="...">
+                <div class="card-img-overlay" style="text-align: center;">
+                  <h2 class="card-title" style="color:white; font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;"><br><br><br><br><strong>Vinilo</strong></h2>
+                  <br><br>
+                  <a href="#" class="btn btn-dark text-light">LEER MÁS</a>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+      
+          </article>
+      
+          
+      
+          <article>
+            <br>
+            <br>
+            <h2 style="text-align: center; font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;">Te recomendamos</h2>
+            <hr>
+            <br>
+      
+            <!--Cards productos-->
+            <div class="container">
+              <div class="row">
+                <div class="row row-cols-2 row-cols-md-5 g-3 mt-3 justify-content-center">
+                  
+                  <div class="col">
+                    <div class="card h-25" id="producto-1"
+                    data-img="img/Red-Hot-Chili-Peppers-Stadium-Arcadium.jpg"
+                    data-nombre="CD Red Hot Chili Pepper / Stadium Arcadium 2 CDs"
+                    data-precio="6990"
+                    style="height: auto;">
+                      <a href="producto.html"><img src="img/Red-Hot-Chili-Peppers-Stadium-Arcadium.jpg" height="200" class="card-img-top" alt="..."></a>
+                      <div class="card-body" style="text-align: center;">
+                        <h5 class="card-title" style="text-align:start;">CD</h5>
+                        <h5 class="card-title" style="text-align: start;">Red Hot Chili Pepper / Stadium Arcadium 2 CDs</h5>
+                        <p class="card-text"><br><s>$ 9.990</s></p>
+                        <p class="card-text" style="color:green"><strong>$ 6.990</strong></p>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-outline-dark" onclick="comprar(1)" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+                          Agregar al carro
+                        </button>
+      
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Producto agregado al carro</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <img src="img/Red-Hot-Chili-Peppers-Stadium-Arcadium.jpg" width="50" height="50">
+                                <p>CD Red Hot Chili Pepper / Stadium Arcadium <strong style="color:black">$ 6.990</strong>
+                                  <br><br><hr><p style="text-align: end;"><strong>Total: </strong><strong style="color:green;">$ 6.990</strong></p>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir comprando</button>
+                                <button type="button" class="btn btn-primary">Ir a pagar<i class="fa fa-paragraph" aria-hidden="true"></i></button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div class="col">
+                    <div class="card h-25" id="producto-2"
+                      data-img="img/Abba.jpg"
+                      data-nombre="Cassette Abba / Greatest Hits Gold 30th Anniversary"
+                      data-precio="15990"
+                      style="height: auto;">
+                      <img src="img/Abba.jpg" height="200" class="card-img-top" alt="...">
+                      <div class="card-body" style="text-align: center;">
+                        <h5 class="card-title" style="text-align: start;">Cassette</h5>
+                        <h5 class="card-title" style="text-align: start;">Abba / Greatest Hits Gold 30th Anniversary</h5>
+                        <p class="card-text"><br><br><s>$ 19.990</s></p>
+                        <p class="card-text" style="color:green"><strong>$ 15.990</strong></p>
+                        <button class="btn btn-outline-dark" type="button" onclick="comprar(2)">Agregar al carro</button>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div class="col">
+                    <div class="card h-25" id="producto-3"
+                    data-img="img/Billie Eilish.jpg"
+                    data-nombre="Cassette Billie Eilish / Happier Than Ever"
+                    data-precio="35990"
+                    style="height: auto;">
+                      <img src="img/Billie Eilish.jpg" height="200" class="card-img-top" alt="...">
+                      <div class="card-body" style="text-align: center;">
+                        <h5 class="card-title" style="text-align: start;">Cassette</h5>
+                        <h5 class="card-title" style="text-align: start;">Billie Eilish / Happier Than Ever</h5>
+                        <p class="card-text"><br><br><s>$ 46.990</s></p>
+                        <p class="card-text" style="color:green"><strong>$ 35.990</strong></p>
+                        <button class="btn btn-outline-dark" type="button" onclick="comprar(3)">Agregar al carro</button>
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div class="col">
+                    <div class="card h-25" id="producto-4"
+                    data-img="img/Guardians of the galaxy.jpg"
+                    data-nombre="Cassette Marvel's Guardians of the Galaxy: Cosmic Mix Vol. 1"
+                    data-precio="29990"
+                    style="height: auto;">
+                      <img src="img/Guardians of the galaxy.jpg" height="200" class="card-img-top" alt="...">
+                      <div class="card-body" style="text-align: center;">
+                        <h5 class="card-title" style="text-align: start;">Cassette</h5>
+                        <h5 class="card-title" style="text-align: start;">Marvel's Guardians of the Galaxy: Cosmic Mix Vol. 1</h5>
+                        <p class="card-text"><br><s>$ 39.990</s></p>
+                        <p class="card-text" style="color:green"><strong>$ 29.990</strong></p>
+                        <button class="btn btn-outline-dark" type="button" onclick="comprar(4)">Agregar al carro</button>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+            </div>
+        </div>
+            
+      
+          </article>
+      
+      <article>
+            
+            <div class="row row-cols-2 row-cols-md-5 g-3 mt-3 justify-content-center">
+              
+              <div class="col">
+                <div class="card h-25" id="producto-5"
+                data-img="img/X_6025083127556471.jpg"
+                data-nombre="Vinilo Tom Jones / The world of Tom Jones"
+                data-precio="22990"
+                style="height: auto;">
+                  <img src="img/X_6025083127556471.jpg" height="200" class="card-img-top" alt="...">
+                  <div class="card-body" style="text-align: center;">
+                    <h5 class="card-title" style="text-align:start;">Vinilo</h5>
+                    <h5 class="card-title" style="text-align: start;">Tom Jones / The world of Tom Jones</h5>
+                    <p class="card-text"><br><br><s>$ 32.990</s></p>
+                    <p class="card-text" style="color:green"><strong>$ 22.990</strong></p>
+                    <button class="btn btn-outline-dark" type="button" onclick="comprar(5)">Agregar al carro</button>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="col">
+                <div class="card h-25" id="producto-6"
+                data-img="img/led_zeppelin.jpg"
+                data-nombre="Vinilo Led Zeppelin / Led Zeppelin II"
+                data-precio="17490"
+                style="height: auto;">
+                  <img src="img/led_zeppelin.jpg" height="200" class="card-img-top" alt="...">
+                  <div class="card-body" style="text-align: center;">
+                    <h5 class="card-title" style="text-align: start;">Vinilo</h5>
+                    <h5 class="card-title" style="text-align: start;">Led Zeppelin / Led Zeppelin II</h5>
+                    <p class="card-text"><br><br><s>$ 24.990</s></p>
+                    <p class="card-text" style="color:green"><strong>$ 17.490</strong></p>
+                    <button class="btn btn-outline-dark" type="button" onclick="comprar(6)">Agregar al carro</button>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="col">
+                <div class="card h-25" id="producto-7"
+                data-img="img/Phil_Collins_No_Jacket_Required_2016 (1).jpg"
+                data-nombre="Vinilo Phil Collins / No Jacket Required 30th anniversary edition"
+                data-precio="25990"
+                style="height: auto;">
+                  <img src="img/Phil_Collins_No_Jacket_Required_2016 (1).jpg" height="200" class="card-img-top" alt="...">
+                  <div class="card-body" style="text-align: center;">
+                    <h5 class="card-title" style="text-align: start;">Vinilo</h5>
+                    <h5 class="card-title" style="text-align: start;">Phil Collins / No Jacket Required 30th anniversary edition</h5>
+                    <p class="card-text"><br><s>$ 36.990</s></p>
+                    <p class="card-text" style="color:green"><strong>$ 25.990</strong></p>
+                    <button class="btn btn-outline-dark" type="button" onclick="comprar(7)">Agregar al carro</button>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="col">
+                <div class="card h-25" id="producto-8"
+                data-img="img/bruno_mars.jpg"
+                data-nombre="CD Bruno Mars / Unorthodox Jukebox"
+                data-precio="5490"
+                style="height: auto;">
+                  <img src="img/bruno_mars.jpg" height="200" class="card-img-top" alt="...">
+                  <div class="card-body" style="text-align: center;">
+                    <h5 class="card-title" style="text-align: start;">CD</h5>
+                    <h5 class="card-title" style="text-align: start;">Bruno Mars / Unorthodox Jukebox</h5>
+                    <p class="card-text"><br><br><s>$ 7.990</s></p>
+                    <p class="card-text" style="color:green"><strong>$ 5.490</strong></p>
+                    <button class="btn btn-outline-dark" type="button" onclick="comprar(8)">Agregar al carro</button>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+      
+          </article>
+      
+          <article>
+            
+            <div class="row row-cols-2 row-cols-md-5 g-3 mt-3 justify-content-center">
+              
+              <div class="col">
+                <div class="card h-25" id="producto-9"
+                data-img="img/the_wall.jpeg"
+                data-nombre="CD Pink Floyd / The Wall (Remastered) 2 CDs"
+                data-precio="10490"
+                style="height: auto;">
+                  <img src="img/the_wall.jpeg" height="200" class="card-img-top" alt="...">
+                  <div class="card-body" style="text-align: center;">
+                    <h5 class="card-title" style="text-align: start;">CD</h5>
+                    <h5 class="card-title" style="text-align: start;">Pink Floyd / The Wall (Remastered) 2 CDs</h5>
+                    <p class="card-text"><br><br><s>$ 14.990</s></p>
+                    <p class="card-text" style="color:green"><strong>$ 10.490</strong></p>
+                    <button class="btn btn-outline-dark" type="button" onclick="comprar(9)">Agregar al carro</button>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="col">
+                <div class="card h-25" id="producto-10"
+                data-img="img/Meteora.jpeg"
+                data-nombre="CD Linkin Park / Meteora"
+                data-precio="16990"
+                style="height: auto;">
+                  <img src="img/Meteora.jpeg" height="200" class="card-img-top" alt="...">
+                  <div class="card-body" style="text-align: center;">
+                    <h5 class="card-title" style="text-align: start;">CD</h5>
+                    <h5 class="card-title" style="text-align: start;">Linkin Park / Meteora</h5>
+                    <p class="card-text"><br><br><s>$ 19.990</s></p>
+                    <p class="card-text" style="color:green"><strong>$ 16.990</strong></p>
+                    <button class="btn btn-outline-dark" type="button" onclick="comprar(10)">Agregar al carro</button>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="col">
+                <div class="card h-25" id="producto-11"
+                data-img="img/Red-Hot-Chili-Peppers-Stadium-Arcadium.jpg"
+                data-nombre="Vinilo Red Hot Chili Pepper / Stadium Arcadium"
+                data-precio="6990"
+                style="height: auto;">
+                  <img src="img/Red-Hot-Chili-Peppers-Stadium-Arcadium.jpg" height="200" class="card-img-top" alt="...">
+                  <div class="card-body" style="text-align: center;">
+                    <h5 class="card-title" style="text-align: start;">Vinilo</h5>
+                    <h5 class="card-title" style="text-align: start;">Red Hot Chili Pepper / Stadium Arcadium</h5>
+                    <p class="card-text"><br><s>$ 9.990</s></p>
+                    <p class="card-text" style="color:green"><strong>$ 6.990</strong></p>
+                    <button class="btn btn-outline-dark" type="button" onclick="comprar(11)">Agregar al carro</button>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="col">
+                <div class="card h-25" id="producto-12"
+                data-img="img/tom_jones.webp"
+                data-nombre="Vinilo Tom Jones / She's a lady"
+                data-precio="19990"
+                style="height: auto;">
+                  <img src="img/tom_jones.webp" height="200" class="card-img-top" alt="...">
+                  <div class="card-body" style="text-align: center;">
+                    <h5 class="card-title" style="text-align: start;">Vinilo</h5>
+                  <h5 class="card-title" style="text-align: start;">Tom Jones / She's a lady</h5>
+                    <p class="card-text"><br><s>$ 24.990</s></p>
+                    <p class="card-text" style="color:green"><strong>$ 19.990</strong></p>
+                    <button class="btn btn-outline-dark" type="button" onclick="comprar(12)">Agregar al carro</button>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+      
+          </article>
+      
+          
+      
+          <!--paginacion-->
+          <nav class="mt-4" aria-label="...">
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+      
+              <li class="page-item active" aria-current="page">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item"><a class="page-link" href="#">5</a></li>
+      
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+      
+          </section>
+    </main>
+{% endblock contenido %}
