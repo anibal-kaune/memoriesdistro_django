@@ -1,11 +1,11 @@
 from django.shortcuts import render
-from .models import Producto, Categoria, Usuario
+from .models import Producto, Categoria, Usuario, Cliente, Boleta, DetalleBoleta
 # Create your views here.
 
 def index(request):
-    #productos = Producto.objects.all()
-    #context = {"productos" : productos,}
-    return render(request, 'tienda/index.html')
+    productos = Producto.objects.all()
+    context = {"productos" : productos,}
+    return render(request, 'tienda/index.html', context)
 
 def cd(request):
      return render(request, 'tienda/cd.html')
@@ -16,8 +16,10 @@ def desarrollo(request):
 def quienessomos(request):
      return render(request, 'tienda/quienesSomos.html')
 
-def producto(request):
-     return render(request, 'tienda/producto.html')
+def producto(request, producto_id):
+     producto = Producto.objects.get(id=producto_id)
+     context={'producto':producto}
+     return render(request, 'tienda/producto.html', context)
 
 def login(request):
      return render(request, 'tienda/login.html')

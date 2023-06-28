@@ -179,7 +179,48 @@
                       </div>
                     </div>
                   </div>
-      
+
+                  
+                  {% for producto in productos %}
+                    <div class="col">
+                        <div class="card h-25" id="{{ producto.id }}"
+                        data-img="{{ producto.foto }}"
+                        data-nombre="{{ producto.nombre }}"
+                        data-precio="{{ producto.precio }}"
+                        style="height: auto;">
+                            <a href="./producto/{{ producto.id }}"><img src="{{ producto.foto }}" height="200" class="card-img-top" alt="..."></a>
+                            <div class="card-body" style="text-align: center;">
+                                <h5 class="card-title" style="text-align: start;">{{ producto.categoria }}</h5>
+                                <h5 class="card-title" style="text-align: start;">{{ producto.nombre }}</h5>
+                                <p class="card-text"><br><br><s>$ {{ producto.precio }}</s></p>
+                                <button type="button" class="btn btn-outline-dark" onclick="comprar(1)" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+                                    Agregar al carro
+                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Producto agregado al carro</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                            <img src="img/Red-Hot-Chili-Peppers-Stadium-Arcadium.jpg" width="50" height="50">
+                                            <p>{{ producto.categoria }} {{ producto.nombre }}<strong style="color:black">$ {{ producto.precio }}</strong>
+                                                <br><br><hr><p style="text-align: end;"><strong>Total: </strong><strong style="color:green;">$ {{ producto.precio }}</strong></p>
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir comprando</button>
+                                            <button type="button" class="btn btn-primary">Ir a pagar<i class="fa fa-paragraph" aria-hidden="true"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  {% endfor %}
+
                   <div class="col">
                     <div class="card h-25" id="producto-3"
                     data-img="img/Billie Eilish.jpg"
