@@ -1,6 +1,39 @@
 {% extends 'tienda/layouts/app.html' %}
 
-{% block contenido %}
+{% block title %}
+<title>Iniciar Sesión</title>
+{% endblock title %}
     
+{% block contenido %}
+  <main class="form-signin w-50 m-auto">
+    <form class="mt-5" action="#" method="GET">
+      <img class="mb-4" src="img/646775-1.jpg" alt="" width="72" height="57" style="text-align: center;">
+      <h1 class="h3 mb-3 fw-normal align-content-center" style="text-align: center;">Inicio de sesión</h1>
+  
+      <div class="form-floating">
+        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Correo electrónico</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" onkeyup="validarContraseña(this)" id="floatingPassword" placeholder="Password">
+        <div class="invalid-feedback" id="fb-contraseña">
+                        
+        </div>
+        <label for="floatingPassword">Contraseña</label>
+        
+        <p style="text-align: end;">¿Problemas con tu contraseña? <a href="#"> Recuperar contraseña</a></p>
+      </div>
+  
+      <div class="checkbox mb-3" style="text-align: start;">
+        <label>
+          <input type="checkbox" value="remember-me"> Recuerdame
+        </label>
+      </div>
+      <button class="w-100 btn btn-lg btn-primary" type="submit">Ingresar</button>
+      
+      <p style="text-align: center;">¿No tienes una cuenta? <a href="registro.html"> Regístrate</a></p>
+      <p class="mt-5 mb-3 text-body-secondary" style="text-align: center;">&copy; 2017–2023</p>
+    </form>
+  </main>
 {% endblock contenido %}
     

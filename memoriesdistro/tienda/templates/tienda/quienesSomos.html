@@ -1,4 +1,46 @@
 {% extends 'tienda/layouts/app.html' %}
-{% block contenido %}
 
+{% block title %}
+<title>Quienes somos</title>
+{% endblock title %}
+    
+{% block contenido %}
+  <div class="card mb-3">
+    <div class="row g-0">
+      <div class="col-md-4 mt-4 justify-content-center" style="text-align: center;">
+        <img src="layouts/statics/img/mthumb.jpg" width="350" height="350" class="img-fluid rounded-circle" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h1 class="card-title" style="font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;">¿Quienes somos?</h1>
+          <p class="card-text">
+            <article>
+              <div class="card bg-dark text-light">
+                <div class="card-body" style="font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;">
+                  <p><strong>Somos una tienda dedicada al mundo de la música del ayer y hoy, llevamos muchos años en el mercado de la música. 
+                    Vendemos vinilos nuevos y usados, cds y cassettes (si, aún existen), con miles de títulos en vinilos, cds y cassettes de diversas licencias musicales. 
+                    Memoriesdistro es una tienda dónde artistas, melómanos y fans encontrarán una experiencia musical única. </strong>
+                    
+                  </p>
+                </div>
+                
+              </div>
+            <div class="row">
+                
+                <p>Siguenos en nuestras redes sociales:</p>
+
+                <button class="btn btn-light col-2 border-dark-subtle"><i class="fa fa-facebook" aria-hidden="true"></i></button>
+                <button class="btn btn-light col-2 border-dark-subtle"><i class="fa fa-instagram" aria-hidden="true"></i></button>
+            </div>
+
+            </article>
+          </p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <br>
 {% endblock contenido %}
