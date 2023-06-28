@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib.auth.models import User
+from .forms import UserForm, ProductoForm
 from .models import Producto, Categoria, Usuario, Cliente, Boleta, DetalleBoleta
 # Create your views here.
 
@@ -29,6 +31,18 @@ def registro(request):
 
 def admin(request):
      return render(request, 'admin/administrator.html')
+
+#CRUD
+def crear_usuario(request):
+    if request.method == 'POST':
+        form = UserForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('admin')
+    else:
+        form = UserForm()
+    
+    return render(request, 'admin/create_user.html', {'form': form})
 
 def create(request):
     if request.method is not "POST":
@@ -81,5 +95,11 @@ def edit(request,pk):
                 return render(request, 'read.html', context)
     
 
-def delete(request):
-    return render(request, 'delete.html')
+def delete(request, producto_id):
+    producto = get_object_or_404(Producto, id=producto_id)
+
+    if request.method == 'POST':
+        producto.delete()
+        return redirect('Ver')
+    
+    return render(request, 'tienda/delete.html', {'producto': producto})

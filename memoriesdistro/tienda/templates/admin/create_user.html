@@ -1,0 +1,17 @@
+{% extends 'admin/layouts/app.html' %}
+{% block title %}
+    Crear usuario
+{% endblock title %}
+
+{% block contenido %}
+    <div class="container">
+        <h1>Crear Usuario</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Crear</button>
+        </form>
+    </div>
+{% endblock contenido %}
+    
+    
