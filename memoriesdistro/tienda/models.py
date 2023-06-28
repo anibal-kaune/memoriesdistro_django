@@ -14,16 +14,13 @@ class Producto(models.Model):
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
     id_usuario = models.IntegerField()
 
-    def __str__(self):
-        return self.nombre, self.precio, self.descripcion
+
 
 class Usuario(models.Model):
     correo = models.EmailField()
     password = models.CharField(max_length=100)
     nombres = models.CharField(max_length=100)
 
-    def __str__(self):
-        return self.nombres , self.correo 
 
 class Cliente(models.Model):
     correo = models.EmailField()

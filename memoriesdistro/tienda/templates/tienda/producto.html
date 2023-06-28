@@ -1,38 +1,33 @@
 {% extends 'tienda/layouts/app.html' %}
 
 {% block title %}
+<title>{{producto.nombre}}</title>
     
 {% endblock title %}
     
 {% block contenido %}
-<div class="card mb-3" id="producto-1"
-data-img="img/Red-Hot-Chili-Peppers-Stadium-Arcadium.jpg"
-data-nombre="CD Red Hot Chili Pepper / Stadium Arcadium 2 CDs"
-data-precio="6990">
+<div class="card mb-3" id="{{ producto.id }}"
+data-img="{{ producto.foto }}"
+data-nombre="{{ producto.nombre }}"
+data-precio="{{ producto.precio }}">
   <div class="row g-0">
     <div class="col-md-4 justify-content-center" style="text-align: center;">
-      <img src="img/Red-Hot-Chili-Peppers-Stadium-Arcadium.jpg" width="350" height="350" class="img-fluid rounded-start" alt="...">
+      <img src="{{ producto.foto }}" width="350" height="350" class="img-fluid rounded-start" alt="...">
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h1 class="card-title" style="font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;">CD Red Hot Chili Pepper / Stadium Arcadium 2 CDs</h1>
+        <h1 class="card-title" style="font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;">{{ producto.categoria }} {{ producto.nombre }}</h1>
         <p class="card-text">
           <article>
             <div class="card">
               <div class="card-body">
-                <p>SKU: 9362499962
+                <p>SKU: {{ producto.id }}
                   <br>
-                  Formato: CD
+                  Formato: {{ producto.categoria }}
                   <br>
-                  Sello Discografico: Warner Music
+                  Stock: <strong></strong>
                   <br>
-                  Año: 2006
-                  <br>
-                  Stock: <strong>12 unidades</strong>
-                  <br>
-                  <s>$ 9.990</s>
-                  <br>
-                  <strong style="color:green">$ 6.990</strong>
+                  <strong>$ {{ producto.precio }}</strong>
                   <br>
                   Cantidad
                   <br>
@@ -53,21 +48,21 @@ data-precio="6990">
                   <!-- Modal -->
                   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="exampleModalLabel">Producto agregado al carro</h1>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Producto agregado al carro</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                            <img src="img/Red-Hot-Chili-Peppers-Stadium-Arcadium.jpg" width="50" height="50">
+                            <p>{{ producto.categoria }} {{ producto.nombre }}<strong style="color:black">$ {{ producto.precio }}</strong>
+                                <br><br><hr><p style="text-align: end;"><strong>Total: </strong><strong style="color:green;">$ {{ producto.precio }}</strong></p>
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir comprando</button>
+                            <button type="button" class="btn btn-primary">Ir a pagar<i class="fa fa-paragraph" aria-hidden="true"></i></button>
+                            </div>
                         </div>
-                        <div class="modal-body">
-                          <img src="img/Red-Hot-Chili-Peppers-Stadium-Arcadium.jpg" width="50" height="50">
-                          <p>CD Red Hot Chili Pepper / Stadium Arcadium <strong style="color:black">$ 6.990</strong>
-                            <br><br><hr><p style="text-align: end;"><strong>Total: </strong><strong style="color:green;">$ 6.990</strong></p>
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir comprando</button>
-                          <button type="button" class="btn btn-primary">Ir a pagar<i class="fa fa-paragraph" aria-hidden="true"></i></button>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </p>

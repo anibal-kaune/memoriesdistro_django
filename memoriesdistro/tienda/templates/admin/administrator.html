@@ -5,11 +5,10 @@
 {% endblock title %}
 
 {% block contenido %}
-    <h1>hello</h1>
     <div class="container">
         <h1>Lista de Productos</h1>
         <a href="{% url 'Crear' %}" class="btn btn-primary">Crear Producto</a>
-        <a href="{% url 'admin_index' %}" class="btn btn-primary">Crear Usuario</a>
+        <a href="{% url 'create_user' %}" class="btn btn-primary">Crear Usuario</a>
         <table class="table">
             <thead>
                 <tr>

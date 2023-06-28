@@ -29,20 +29,26 @@ def login(request):
 def registro(request):
      return render(request, 'tienda/registro.html')
 
+def admin(request):
+    productos = Producto.objects.all()
+    context={'productos':productos}
+    return render(request, 'admin/administrator.html', context)
+
 #CRUD
 def crear_usuario(request):
     if request.method == 'POST':
         form = UserForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('admin_index')
+            return redirect('admin')
     else:
         form = UserForm()
     
     return render(request, 'admin/create_user.html', {'form': form})
 
+"""
 def create(request):
-    if request.method is not "POST":
+    if request.method !="POST":
         productos = Producto.objects.all()
         context={'producto':productos}
         return render(request,'create.html', context)
@@ -66,18 +72,28 @@ def create(request):
                                       id_categoria=objCategoria)
         obj.save()
         context={'mensaje':"Datos guardados"}
-        return render(request, 'create.html', context)
+        return render(request, 'admin/create.html', context)
+"""
 
-def admin(request):
-    productos = Producto.objects.all()
-    context={'productos':productos}
-    return render(request, 'admin/administrator.html', context)
+def create(request):
+    if request.method == 'POST':
+        form = ProductoForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('admin')
+    else:
+        form = ProductoForm()
+    
+    return render(request, 'admin/create.html', {'form': form})
 
+"""
 def show(request,id):
     print(id)
     #buscar un elemento
     return render(request, 'show.html')
-
+"""
+    
+"""
 def edit(request,pk):
     if pk !="":
         #buscar un elemento
@@ -89,14 +105,28 @@ def edit(request,pk):
                 return render(request, 'edit.html', context)
         else:
                 context={'mensaje_error':"Producto no encontrado"}
-                return render(request, 'read.html', context)
+                return render(request, 'admin/edit.html', context)
+"""
+                    
+def edit(request, producto_id):
+    producto = get_object_or_404(Producto, id=producto_id)
+
+    if request.method == 'POST':
+        form = ProductoForm(request.POST, request.FILES, instance=producto)
+        if form.is_valid():
+            form.save()
+            return redirect('admin')
+    else:
+        form = ProductoForm(instance=producto)
     
+    return render(request, 'admin/edit.html', {'form': form, 'producto': producto})
+
 
 def delete(request, producto_id):
     producto = get_object_or_404(Producto, id=producto_id)
 
     if request.method == 'POST':
         producto.delete()
-        return redirect('Ver')
+        return redirect('admin')
     
-    return render(request, 'tienda/delete.html', {'producto': producto})
+    return render(request, 'admin/delete.html', {'producto': producto})
