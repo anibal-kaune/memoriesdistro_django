@@ -6,5 +6,32 @@
 
 {% block contenido %}
     <h1>hello</h1>
+    <div class="container">
+        <h1>Lista de Productos</h1>
+        <a href="{% url 'Crear' %}" class="btn btn-primary">Crear Producto</a>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for producto in productos %}
+                    <tr>
+                        <td>{{ producto.id }}</td>
+                        <td>{{ producto.nombre }}</td>
+                        <td>{{ producto.precio }}</td>
+                        <td>
+                            <a href="{% url 'Editar' producto.id %}" class="btn btn-sm btn-primary">Editar</a>
+                            <a href="{% url 'Eliminar' producto.id %}" class="btn btn-sm btn-danger">Eliminar</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 {% endblock contenido %}
         
