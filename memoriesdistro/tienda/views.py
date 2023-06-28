@@ -29,16 +29,13 @@ def login(request):
 def registro(request):
      return render(request, 'tienda/registro.html')
 
-def admin(request):
-     return render(request, 'admin/administrator.html')
-
 #CRUD
 def crear_usuario(request):
     if request.method == 'POST':
         form = UserForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('admin')
+            return redirect('admin_index')
     else:
         form = UserForm()
     
@@ -71,10 +68,10 @@ def create(request):
         context={'mensaje':"Datos guardados"}
         return render(request, 'create.html', context)
 
-def read(request):
+def admin(request):
     productos = Producto.objects.all()
     context={'productos':productos}
-    return render(request, 'read.html', context)
+    return render(request, 'admin/administrator.html', context)
 
 def show(request,id):
     print(id)

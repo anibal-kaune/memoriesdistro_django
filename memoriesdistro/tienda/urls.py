@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import index, create, read, show, edit, delete, cd, desarrollo, quienessomos, producto, login, registro, admin, crear_usuario
+from .views import index, create, show, edit, delete, cd, desarrollo, quienessomos, producto, login, registro, admin, crear_usuario
 
 urlpatterns = [
     path("", index, name="index"),
@@ -12,7 +12,6 @@ urlpatterns = [
     path("administrator", admin, name="admin_index"),
     path("administrator/create_user", crear_usuario, name="create_user"),
     path('create', create, name='Crear'),
-    path('read', read, name='Ver'),
     path('show', show, name='Mostrar'),
     path('edit/<str:pk>', edit, name='Editar'),
     path('delete/<str:pk>', delete, name='Eliminar')
