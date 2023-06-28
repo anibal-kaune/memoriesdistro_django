@@ -25,6 +25,9 @@ def login(request):
 def registro(request):
      return render(request, 'tienda/registro.html')
 
+def admin(request):
+     return render(request, 'admin/administrator.html')
+
 def create(request):
     if request.method is not "POST":
         productos = Producto.objects.all()
