@@ -10,7 +10,9 @@ def index(request):
     return render(request, 'tienda/index.html', context)
 
 def cd(request):
-     return render(request, 'tienda/cd.html')
+     productos = Producto.objects.all()
+     context = {"productos" : productos,}
+     return render(request, 'tienda/cd.html', context)
 
 def desarrollo(request):
      return render(request, 'tienda/desarrollo.html')

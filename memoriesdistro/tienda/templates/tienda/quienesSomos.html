@@ -8,7 +8,8 @@
   <div class="card mb-3">
     <div class="row g-0">
       <div class="col-md-4 mt-4 justify-content-center" style="text-align: center;">
-        <img src="layouts/statics/img/mthumb.jpg" width="350" height="350" class="img-fluid rounded-circle" alt="...">
+        {% load static %}
+        <img src="{% static 'img/mthumb.jpg' %}" width="350" height="350" class="img-fluid rounded-circle" alt="...">
       </div>
       <div class="col-md-8">
         <div class="card-body">

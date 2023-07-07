@@ -21,8 +21,6 @@ data-precio="{{ producto.precio }}">
           <article>
             <div class="card">
               <div class="card-body">
-                <p>SKU: {{ producto.id }}
-                  <br>
                   Formato: {{ producto.categoria }}
                   <br>
                   Stock: <strong></strong>
@@ -54,7 +52,7 @@ data-precio="{{ producto.precio }}">
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                            <img src="img/Red-Hot-Chili-Peppers-Stadium-Arcadium.jpg" width="50" height="50">
+                            <img src="{{ producto.foto }}" width="50" height="50">
                             <p>{{ producto.categoria }} {{ producto.nombre }}<strong style="color:black">$ {{ producto.precio }}</strong>
                                 <br><br><hr><p style="text-align: end;"><strong>Total: </strong><strong style="color:green;">$ {{ producto.precio }}</strong></p>
                             </div>

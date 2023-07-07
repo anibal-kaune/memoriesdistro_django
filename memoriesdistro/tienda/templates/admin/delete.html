@@ -6,11 +6,16 @@
 
 {% block contenido %}
     <div class="container">
-        <h1>Editar Producto</h1>
+        <h1>¿Eliminar Producto?</h1>
+        <div class="row">
+            <h3>{{ producto.nombre }}</h3>
+        </div>
+        
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit" class="btn btn-primary">Guardar</button>
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+            <a class="btn btn-primary" href="{% url 'admin' %}">Volver</a>
         </form>
     </div>
 {% endblock contenido %}

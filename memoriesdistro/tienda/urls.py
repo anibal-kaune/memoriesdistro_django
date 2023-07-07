@@ -1,5 +1,7 @@
 from django.urls import path
 from .views import index, create, edit, delete, cd, desarrollo, quienessomos, producto, login, registro, admin, crear_usuario
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path("", index, name="index"),
@@ -13,6 +15,8 @@ urlpatterns = [
     path("administrator/create_user", crear_usuario, name="create_user"),
     path('create', create, name='Crear'),
     #path('show', show, name='Mostrar'),
-    path('edit/<str:pk>', edit, name='Editar'),
-    path('delete/<str:pk>', delete, name='Eliminar')
+    path('edit/<str:producto_id>', edit, name='Editar'),
+    path('delete/<str:producto_id>', delete, name='Eliminar')
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

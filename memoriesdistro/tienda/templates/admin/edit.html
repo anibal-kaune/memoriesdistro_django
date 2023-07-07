@@ -7,11 +7,25 @@
 {% block contenido %}
     <div class="container">
         <h1>Editar Producto</h1>
-        <form method="POST" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="btn btn-primary">Guardar</button>
-        </form>
+        <div class="row g-5">
+            <div class="col-md-12 col-lg-12">
+                <div class="row g-3">
+                    <div class="col-sm-12">
+                        <div class="card" style="text-align: center">
+                            <div class="card-body justify-content-center" style="text-align: center">
+                                <form method="POST" enctype="multipart/form-data">
+                                    <br>
+                                    {% csrf_token %}
+                                    {{ form.as_p }}
+                                    <button type="submit" class="btn btn-success">Guardar</button>
+                                    <a class="btn btn-primary" href="{% url 'admin' %}">Volver</a>
+                                </form>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock contenido %}
     
