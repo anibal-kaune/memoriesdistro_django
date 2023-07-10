@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login
 from .forms import UserForm, ProductoForm
 from .models import Producto, Categoria, Usuario, Cliente, Boleta, DetalleBoleta
 # Create your views here.
@@ -30,6 +31,22 @@ def login(request):
 
 def registro(request):
      return render(request, 'tienda/registro.html')
+
+def login_view(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(request, username=username, password=password)
+        
+        if user is not None:
+            login(request, user)
+            request.session['user_id'] = user.id
+            return redirect('admin')
+        else:
+            error_message = 'Nombre de usuario o contraseña incorrectos.'
+            return render(request, 'admin/login.html', {'error_message': error_message})
+    
+    return render(request, 'admin/administrator.html')
 
 def admin(request):
     productos = Producto.objects.all()

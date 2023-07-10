@@ -7,6 +7,7 @@ class Categoria(models.Model):
         return self.nombre
 
 class Producto(models.Model):
+    sku = models.IntegerField()
     nombre = models.CharField(max_length=100)
     precio = models.DecimalField(max_digits=10, decimal_places=2)
     descripcion = models.TextField()
@@ -14,18 +15,20 @@ class Producto(models.Model):
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
     id_usuario = models.IntegerField()
 
-
-
 class Usuario(models.Model):
+    nombres = models.CharField(max_length=100)
     correo = models.EmailField()
     password = models.CharField(max_length=100)
-    nombres = models.CharField(max_length=100)
-
+    
+class Rol(models.Model):
+    nombre = models.CharField(max_length=100)
 
 class Cliente(models.Model):
+    nombre = models.CharField(max_length=100)
+    apellido = models.CharField(max_length=100)
+    telefono = models.IntegerField()
     correo = models.EmailField()
     password = models.CharField(max_length=100)
-    nombres = models.CharField(max_length=100)
 
     def __str__(self):
         return self.nombres , self.correo

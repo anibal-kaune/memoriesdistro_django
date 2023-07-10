@@ -140,7 +140,7 @@
                                 <h5 class="card-title" style="text-align: start;">{{ producto.categoria }}</h5>
                                 <h5 class="card-title" style="text-align: start;">{{ producto.nombre }}</h5>
                                 <p class="card-text"><br><br>$ {{ producto.precio }}</p>
-                                <button type="button" class="btn btn-outline-dark" onclick="comprar(1)" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+                                <button type="button" class="btn btn-outline-dark" onclick="comprar({{ producto.id }})" data-bs-toggle="modal" data-bs-target="#exampleModal" >
                                     Agregar al carro
                                 </button>
                                 <!-- Modal -->

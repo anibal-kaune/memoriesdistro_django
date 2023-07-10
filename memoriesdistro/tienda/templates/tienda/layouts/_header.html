@@ -98,7 +98,7 @@
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-          <table class="table text-light">
+          <table class="table text-light" id="lista-productos">
             <thead>
               <tr>
                 <th scope="col">Imagen</th>
@@ -106,7 +106,7 @@
                 <th scope="col">Precio</th>
               </tr>
             </thead>
-            <tbody id="carrito-producto">
+            <tbody id="lista-productos-disponibles">
               <tr>
                 <td></td>
                 <td>No hay productos agregados</td>
@@ -124,7 +124,7 @@
                   </button>
               </form> -->
               <button class="btn btn-success btn-lg" id="comprar-btn" type="button">
-                  Pagar $ <span id="carrito-precio">0</span>
+                  Pagar $ <span id="total">0</span>
               </button>
           </div>
 

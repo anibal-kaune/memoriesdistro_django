@@ -21,14 +21,17 @@ data-precio="{{ producto.precio }}">
           <article>
             <div class="card">
               <div class="card-body">
+                  <br>
+                  SKU: {{ producto.sku }}
+                  <br>
                   Formato: {{ producto.categoria }}
                   <br>
                   Stock: <strong></strong>
                   <br>
                   <strong>$ {{ producto.precio }}</strong>
                   <br>
-                  Cantidad
-                  <br>
+                  Cantidad: 
+                  <br><br>
                   <div class="btn-group" role="group" aria-label="Basic example">
                     <button type="button" class="btn btn-dark">-</button>
                     <input class="form-control me-3" type="search" placeholder="1" aria-label="Search" style="text-align: center;">
@@ -39,9 +42,14 @@ data-precio="{{ producto.precio }}">
                   <br><br>
 
                   <!-- Button trigger modal -->
-                  <button type="button" class="btn btn-outline-dark" onclick="comprar(1)" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+                  <button type="button" class="btn btn-outline-dark" onclick="comprar({{ producto.id }})" data-bs-toggle="modal" data-bs-target="#exampleModal" >
                     Agregar al carro
                   </button>
+                  <br>
+                  <br>
+                  Descripción:
+                  <br>
+                  {{ producto.descripcion }} 
 
                   <!-- Modal -->
                   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -76,72 +84,4 @@ data-precio="{{ producto.precio }}">
   </div>
 </div>
 
-  <br>
-  <br>
-  <h2 style="text-align: center; font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif;">También te recomendamos</h2>
-  <hr>
-  <br>
-  <div class="row row-cols-2 row-cols-md-5 g-3 mt-3 justify-content-center">
-      
-    <div class="col">
-      <div class="card h-25" style="height: auto;">
-        <img src="img/ed sheeran.jpg" height="200" class="card-img-top" alt="...">
-        <div class="card-body" style="text-align: center;">
-          <h5 class="card-title" style="text-align:start;">CD</h5>
-          <h5 class="card-title" style="text-align: start;">Ed Sheeran / Divide</h5>
-          <p class="card-text"><br><br><s>$ 8.990</s></p>
-          <p class="card-text" style="color:green"><strong>$ 6.990</strong></p>
-          <a href="#" class="btn btn-outline-dark">Agregar al carro</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col">
-      <div class="card h-25" id="producto-10"
-      data-img="img/Meteora.jpeg"
-      data-nombre="CD Linkin Park / Meteora"
-      data-precio="16990"
-      style="height: auto;">
-        <img src="img/Meteora.jpeg" height="200" class="card-img-top" alt="...">
-        <div class="card-body" style="text-align: center;">
-          <h5 class="card-title" style="text-align: start;">CD</h5>
-          <h5 class="card-title" style="text-align: start;">Linkin Park / Meteora</h5>
-          <p class="card-text"><br><br><s>$ 19.990</s></p>
-          <p class="card-text" style="color:green"><strong>$ 16.990</strong></p>
-          <button class="btn btn-outline-dark" type="button" onclick="comprar(10)">Agregar al carro</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="col">
-      <div class="card h-25" id="producto-3"
-      data-img="img/Billie Eilish.jpg"
-      data-nombre="Cassette Billie Eilish / Happier Than Ever"
-      data-precio="35990"
-      style="height: auto;">
-        <img src="img/Billie Eilish.jpg" height="200" class="card-img-top" alt="...">
-        <div class="card-body" style="text-align: center;">
-          <h5 class="card-title" style="text-align: start;">Cassette</h5>
-          <h5 class="card-title" style="text-align: start;">Billie Eilish / Happier Than Ever</h5>
-          <p class="card-text"><br><s>$ 46.990</s></p>
-          <p class="card-text" style="color:green"><strong>$ 35.990</strong></p>
-          <button class="btn btn-outline-dark" type="button" onclick="comprar(3)">Agregar al carro</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="col">
-      <div class="card h-25" style="height: auto;">
-        <img src="img/led_zeppelin.jpg" height="200" class="card-img-top" alt="...">
-        <div class="card-body" style="text-align: center;">
-          <h5 class="card-title" style="text-align: start;">Vinilo</h5>
-          <h5 class="card-title" style="text-align: start;">Led Zeppelin / Led Zeppelin II</h5>
-          <p class="card-text"><br><s>$ 24.990</s></p>
-          <p class="card-text" style="color:green"><strong>$ 17.490</strong></p>
-          <a href="#" class="btn btn-outline-dark">Agregar al carro</a>
-        </div>
-      </div>
-    </div>
-    
-  </div>
 {% endblock contenido %}

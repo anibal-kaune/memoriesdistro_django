@@ -1,4 +1,4 @@
-{% extends 'tienda/layouts/app.html' %}
+{% extends 'admin/layouts/app.html' %}
 
 {% block title %}
 <title>Iniciar Sesión</title>
@@ -6,7 +6,8 @@
     
 {% block contenido %}
   <main class="form-signin w-50 m-auto">
-    <form class="mt-5" action="#" method="GET">
+    <form class="mt-5" action="#" method="POST">
+      {% csrf_token %}
       {% load static %}
       <div style="text-align: center">
         <img class="mb-4" src="{% static 'img/646775-1.jpg' %}" alt="" width="72" height="57" style="text-align: center;">
@@ -18,7 +19,7 @@
         <label for="floatingInput">Correo electrónico</label>
       </div>
       <div class="form-floating">
-        <input type="password" class="form-control" onkeyup="validarContraseña(this)" id="floatingPassword" placeholder="Password">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
         <div class="invalid-feedback" id="fb-contraseña">
                         
         </div>
@@ -32,9 +33,13 @@
           <input type="checkbox" value="remember-me"> Recuerdame
         </label>
       </div>
+      {% if error_message %}
+            <div class="alert alert-danger" role="alert">
+                {{ error_message }}
+            </div>
+      {% endif %}
       <button class="w-100 btn btn-lg btn-primary" type="submit">Ingresar</button>
       
-      <p style="text-align: center;">¿No tienes una cuenta? <a href="{% url 'registro' %}"> Regístrate</a></p>
       <p class="mt-5 mb-3 text-body-secondary" style="text-align: center;">&copy; 2017–2023</p>
     </form>
   </main>
